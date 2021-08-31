@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #B5EAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-container{
+    width: 60%;
+    background-color: #dcfdfd;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.profile-picture-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture{
+    height: 150px;
+    width: 150px;
+}
+
+.profile-picture img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #93f1f1;
+    object-fit: cover;
+}
+
+.profile-name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    margin-bottom: 20px;
+}
+
+.bio-detail{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.private-bio,.skill-bio{
+    width: 50%;
+}
+
+.label-bio,.label-skill{
+    font-size: 0.7rem;
+    color: rgb(82, 81, 81);
+}
+
+.data-bio{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.indikator-skill{
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.html,.css,.js{
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    animation: skill 1s reverse;
+}
+
+.html{
+    width: 95%;
+    background-color: orangered;
+    animation-delay: .1s;
+}
+
+.css{
+    width: 92%;
+    background-color: navy;
+    animation-delay: .3s;
+}
+
+.js{
+    width: 90%;
+    background-color: rgb(207, 207, 5);
+    animation-delay: .5s;
+}
+
+@keyframes skill{
+    100%{
+        width:0;
+    }
+}
