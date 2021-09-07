@@ -8,7 +8,15 @@ const books = [
     { name: "komik", timeSpent: 1000 },
 ];
 
-books.forEach(element=>{
-    readBooks(10000, element, ()=>{});
-})
+const read = (time, books, index) =>{
+    if (index < books.length) {
+        readBooks(time,books[index], (rest)=>{
+            if(rest >= 0){
+                index++
+                read(rest, books, index)
+            }
+        })
+    }
+}
 
+read(10000, books, 0)

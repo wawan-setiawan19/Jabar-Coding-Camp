@@ -8,6 +8,17 @@ const books = [
     { name: "komik", timeSpent: 1000 },
 ];
 
-books.forEach(element=>{
-    readBooksPromise(10000,element)
-})
+const read = (time, books, index) => {
+    readBooksPromise(time, books[index])
+    .then(result=>{
+        index++
+        if(result > 0){
+            read(result, books, index);
+        }
+    })
+    .catch(err=>{
+        console.error(err);
+    })
+};
+
+read(10000, books, 0);
