@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2 - Vue JS</title>
+</head>
+<body>
+    <div id="app">
+        <form v-on:submit.prevent="addNew">
+            <input
+            v-model="newName"
+            >
+            <button>Add</button>
+        </form>
+        <ul v-for="person in person">
+            <li>
+                {{person.name}}
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                newName: '',
+                person: [
+                {
+                    name: 'Muhammad Iqbal Mubbarok',
+                },
+                {
+                    name: 'Ruby Purwanti',
+                },
+                {
+                    name: 'Faqih Muhammad'
+                }
+                ],
+            },
+            methods: {
+                addNew: function () {
+                this.person.push({
+                    name: this.newName
+                })
+                this.newTodoText = ''
+                },
+                delete: function(){
+                    // console.log(this.index);
+                },
+                update: function(){
+                    
+                }
+            }
+            })
+    </script>
+</body>
+</html>
