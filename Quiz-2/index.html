@@ -17,6 +17,8 @@
         <ul v-for="person in person">
             <li>
                 {{person.name}}
+                <button v-on:click="update">Edit</button> |
+                <button>Delete</button>
             </li>
         </ul>
     </div>
@@ -51,7 +53,7 @@
                     // console.log(this.index);
                 },
                 update: function(){
-                    
+
                 }
             }
             })
